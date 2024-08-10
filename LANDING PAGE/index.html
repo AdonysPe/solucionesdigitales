@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Digital para Agricultores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e6e6e6;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: #388E3C;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #2E7D32;
+        }
+        .hero {
+            background: url('link_a_imagen') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero h1, .hero p, .hero .cta-buttons {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        .cta-buttons {
+            margin-top: 20px;
+        }
+        .cta-buttons a {
+            background: #FFA500;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background 0.3s;
+            font-size: 1.2em;
+        }
+        .cta-buttons a:hover {
+            background: #e69500;
+        }
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section:nth-of-type(odd) {
+            background: #ffffff;
+        }
+        .section:nth-of-type(even) {
+            background: #f4f4f4;
+        }
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .features, .benefits, .testimonials {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .feature, .benefit, .testimonial {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1 1 300px;
+            margin: 10px;
+            background-color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature:hover, .benefit:hover, .testimonial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .feature img, .benefit img {
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            background: #f4f4f4;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form form {
+            max-width: 550px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #4CAF50;
+        }
+        .contact-form button {
+            background: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.2em;
+        }
+        .contact-form button:hover {
+            background: #45a049;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #FFA500;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            color: #e69500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Plataforma Digital para Agricultores</h1>
+        <nav>
+            <a href="#features">Características</a>
+            <a href="#benefits">Beneficios</a>
+            <a href="#testimonials">Testimonios</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Conéctate Fácilmente con Proveedores y Clientes</h1>
+        <p>La solución digital que simplifica la gestión de tu negocio agrícola.</p>
+        <div class="cta-buttons">
+            <a href="#contact">Regístrate Gratis</a>
+            <a href="#features">Conoce Más</a>
+        </div>
+    </section>
+    <section id="features" class="section">
+        <h2>Características de la Plataforma</h2>
+        <div class="features">
+            <div class="feature">
+                <img src="img/gestionimg.jpg" width="100%" height="250px" alt="Gestión de Inventarios">
+                <h3>Gestión de Inventarios</h3>
+                <p>Automatización y control en tiempo real de tus productos.</p>
+            </div>
+            <div class="feature">
+                <img src="img/conexionimg.jpeg" width="100%" height="250px" alt="Conexión Directa">
+                <h3>Conexión Directa</h3>
+                <p>Comunicación eficiente con proveedores y clientes sin intermediarios.</p>
+            </div>
+            <div class="feature">
+                <img src="img/marketingimg.avif" width="100%" height="250px" alt="Marketing Digital">
+                <h3>Herramientas de Marketing Digital</h3>
+                <p>Expande tu mercado con estrategias digitales sencillas y efectivas.</p>
+            </div>
+            <div class="feature">
+                <img src="img/uso.png" width="100%" height="250px" alt="Facilidad de Uso">
+                <h3>Facilidad de Uso</h3>
+                <p>Una interfaz intuitiva que cualquier agricultor puede manejar.</p>
+            </div>
+            <div class="feature">
+                <img src="img/seguridad.jpg" width="15%" height="250px" alt="Seguridad y Confiabilidad">
+                <h3>Seguridad y Confiabilidad</h3>
+                <p>Protege tus datos y operaciones con las más altas medidas de seguridad.</p>
+            </div>
+        </div>
+    </section>
+    <section id="benefits" class="section">
+        <h2>Beneficios</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <img src="img/tiempoimg.jpeg" width="100%" height="250px" alt="Ahorro de Tiempo">
+                <h3>Ahorro de Tiempo</h3>
+                <p>Menos tiempo en gestiones manuales, más tiempo para tus cultivos.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/costosimg.jpeg" width="100%" height="250px" alt="Reducción de Costos">
+                <h3>Reducción de Costos</h3>
+                <p>Eliminación de intermediarios costosos.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/ventasimg.jpeg" width="100%" height="250px" alt="Incremento de Ventas">
+                <h3>Incremento de Ventas</h3>
+                <p>Mayor visibilidad y alcance de tu producto.</p>
+            </div>
+            <div class="benefit">
+                <img src="img/eficienciaimg.jpeg" width="100%" height="250px" alt="Eficiencia Operativa">
+                <h3>Eficiencia Operativa</h3>
+                <p>Menos errores y mayor precisión en tus operaciones.</p>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="section">
+        <h2>Testimonios</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div>
+                    <img src="img/juan-perez.jpg" alt="" style="border-radius: 10px;">
+                </div>
+                <p>"Desde que uso esta plataforma, mi negocio ha crecido un 30% en ventas."</p>
+                <p>- Juan Pérez, Agricultor de Hortalizas</p>
+            </div>
+            <div class="testimonial">
+                <div>
+                    <img src="img/maria-lopez.jpeg" alt="" style="border-radius: 10px;">
+                </div>
+                <p>"La gestión de inventarios es ahora mucho más sencilla y rápida."</p>
+                <p>- María López, Productora de Frutas</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-form">
+        <div style="text-align: center;">
+            <h2>¡Regístrate Ahora!</h2>
+        </div>
+        
+        <form>
+            <input type="text" name="name" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Teléfono" required>
+            <input type="text" name="crop" placeholder="Tipo de Cultivo" required>
+            <button type="submit">Regístrate Ahora</button>
+        </form>
+    </section>
+    <footer>
+        <p>Localidad: Lima, Perú</p>
+        <p>Teléfono: +51 902 721 769</p>
+        <p>Email: solucionesdigitales@gmail.com</p>
+        <p>
+            <a href="#">Términos y Condiciones</a>
+            <a href="#">Política de Privacidad</a>
+        </p>
+    </footer>
+</body>
+</html>
